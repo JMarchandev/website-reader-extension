@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Web reader",
+  "version": "1.0.0",
+  "description": "Extension allow read your selection text.",
+  "background": {
+    "service_worker": "./background.js"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "scripting",
+    "activeTab",
+    "ttsEngine",
+    "tts"
+  ],
+  "tts_engine": {
+    "voices": [
+      {
+        "voice_name": "Alice",
+        "lang": "en-US",
+        "event_types": ["start", "marker", "end"]
+      },
+      {
+        "voice_name": "Pat",
+        "lang": "en-US",
+        "event_types": ["end"]
+      }
+    ]
+  },
+  "author": "Jean-Marie Marchand",
+  "homepage_url": "https://github.com/JMarchandev/",
+  "short_name": "Web reader",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Web reader",
+    "default_icon": {
+      "16": "/images/react-logo-16.png",
+      "32": "/images/react-logo-32.png",
+      "48": "/images/react-logo-48.png",
+      "128": "/images/react-logo-128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/react-logo-16.png",
+    "32": "/images/react-logo-32.png",
+    "48": "/images/react-logo-48.png",
+    "128": "/images/react-logo-128.png"
+  }
+}
